@@ -16,4 +16,4 @@ images/duracion_edutubers.png
 *.log
 *.maf
 *.tex
-
+.obsidian/*
