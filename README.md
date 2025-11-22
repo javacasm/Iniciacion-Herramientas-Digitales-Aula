@@ -1,11 +1,7 @@
 # INICIACIÓN A LAS HERRAMIENTAS DIGITALESEN EL AULA ([241812GE099](https://www.juntadeandalucia.es/educacion/secretariavirtual/consultaCEP/actividad/241812GE099/))
 
 
-## CEP de Motril 
-
-Febrero de 2024
-
-12/02/2024 - 20/03/2024
+Diciembre de 2025
 
 ### José Antonio Vacas @javacasm
 
