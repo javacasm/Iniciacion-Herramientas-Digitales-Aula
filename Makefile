@@ -7,10 +7,10 @@ T2 = "Tema 2 - Presentaciones - Canva.docx"
 T3 = "Tema 3 - Interacción - Genially.docx"
 T4 = "Tema 4 - Cuestionarios - Kahoot.docx" 
 T5 = "Tema 5 - Otras herramientas.docx"
+T6 = "Tema 6 - Herramientas IA en educación.docx"
+VARIOS = "Varios.docx"
 
-
-
-all: 0 1 2 3 4 5
+all: 0 1 2 3 4 5 6
 
 tex: 0tex 1tex
 
@@ -87,6 +87,7 @@ tex: 0tex 1tex
 		2.0.0.0.0.Cabecera_latex.md \
 		2.0.0.Presentaciones.md \
 		2.0.1.Canva.md \
+		2.0.1.Canva_intro.md \
 		2.0.2.Canva_tutorial_impacientes.md \
 		2.0.3.Canva_Licencias.md \
 		2.0.4.Canva_educacion.md \
@@ -166,4 +167,34 @@ tex: 0tex 1tex
 		5.1.Edpuzzle.md \
 		5.2.Educaplay.md \
 		5.8.bitmoji.md
+
+6:
+	pandoc --pdf-engine=xelatex   \
+		-V papersize:a4paper    \
+		--template=./LaTeX_ES.latex    \
+		--reference-doc=plantilla.docx \
+		-o  $(T6)  \
+		6.0.0.0.Cabecera_latex.md \
+		6.0.0.0.Cabecera.md \
+		"6.0.IA y educación.md" \
+		"6.1.IA generativa.md" \
+		"6.2.Creación de imágenes con Google Nano Banana.md" \
+		"6.3.Google NotebookLM.md" \
+		"6.4.Gemini StoryBook.md" \
+		"6.5.Gamma.md"
+
+
+varios:
+	pandoc --pdf-engine=xelatex   \
+		-V papersize:a4paper    \
+		--template=./LaTeX_ES.latex    \
+		--reference-doc=plantilla.docx \
+		-o  $(VARIOS) \
+		2.0.1.Canva_intro.md \
+		"2.IA.Canva IA.md" \
+		"3.IA.Genially IA.md" \
+		"4.5.6.Mentimeter.md" \
+		"4.5.7.Quizlet.md" \
+		"5.3.Padlet.md" \
+		"5.5.Aplicaciones alternativas.md"
 
